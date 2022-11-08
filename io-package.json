@@ -1,0 +1,106 @@
+{
+	"common": {
+		"name": "shuttercontrol-ai",
+		"version": "0.0.1",
+		"news": {
+			"0.0.1": {
+				"en": "initial release",
+				"de": "Erstveröffentlichung",
+				"ru": "Начальная версия",
+				"pt": "lançamento inicial",
+				"nl": "Eerste uitgave",
+				"fr": "Première version",
+				"it": "Versione iniziale",
+				"es": "Versión inicial",
+				"pl": "Pierwsze wydanie",
+				"zh-cn": "首次出版"
+			}
+		},
+		"title": "ShutterControl-AI",
+		"titleLang": {
+			"en": "ShutterControl-AI",
+			"de": "ShutterControl-AI",
+			"ru": "ShutterControl-ИИ",
+			"pt": "ShutterControl-AI",
+			"nl": "ShutterControl-AI",
+			"fr": "ShutterControl-AI",
+			"it": "ShutterControl-AI",
+			"es": "ShutterControl-IA",
+			"pl": "ShutterControl-AI",
+			"zh-cn": "快门控制-AI"
+		},
+		"desc": {
+			"en": "Artifically intelligent roller shutter control",
+			"de": "Künstlich intelligente Rollladensteuerung",
+			"ru": "Искусственно интеллектуальное управление рольставнями",
+			"pt": "Controle de persianas artificialmente inteligente",
+			"nl": "Kunstmatig intelligente rolluikbesturing",
+			"fr": "Commande de volet roulant artificiellement intelligente",
+			"it": "Controllo delle tapparelle artificialmente intelligente",
+			"es": "Control de persianas enrollables artificialmente inteligente",
+			"pl": "Sztucznie inteligentne sterowanie roletami",
+			"zh-cn": "人工智能卷帘门控制"
+		},
+		"authors": [
+			"Christian Koller-Kink <chris.homecineplexx@gmail.com>"
+		],
+		"keywords": [
+			"shuttercontrol",
+			"A"
+		],
+		"license": "MIT",
+		"platform": "Javascript/Node.js",
+		"main": "main.js",
+		"icon": "shuttercontrol-ai.png",
+		"enabled": true,
+		"extIcon": "https://raw.githubusercontent.com/homecineplexx/ioBroker.shuttercontrol-ai/main/admin/shuttercontrol-ai.png",
+		"readme": "https://github.com/homecineplexx/ioBroker.shuttercontrol-ai/blob/main/README.md",
+		"loglevel": "info",
+		"mode": "daemon",
+		"type": "household",
+		"compact": true,
+		"connectionType": "local",
+		"dataSource": "poll",
+		"adminUI": {
+			"config": "materialize"
+		},
+		"dependencies": [
+			{
+				"js-controller": ">=3.3.22"
+			}
+		],
+		"globalDependencies": [
+			{
+				"admin": ">=5.0.0"
+			}
+		]
+	},
+	"native": {
+		"option1": true,
+		"option2": "42"
+	},
+	"objects": [],
+	"instanceObjects": [
+		{
+			"_id": "info",
+			"type": "channel",
+			"common": {
+				"name": "Information"
+			},
+			"native": {}
+		},
+		{
+			"_id": "info.connection",
+			"type": "state",
+			"common": {
+				"role": "indicator.connected",
+				"name": "Device or service connected",
+				"type": "boolean",
+				"read": true,
+				"write": false,
+				"def": false
+			},
+			"native": {}
+		}
+	]
+}
